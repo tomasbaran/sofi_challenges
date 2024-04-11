@@ -1,8 +1,19 @@
-bool isPalindrome(int number) {
-// do not convert the integer to String and any higher order functions which is available in the libraries
-  return false;
-}
+import 'package:altimetrik/core/services/dependencies_locator.dart';
+import 'package:altimetrik/features/products/presentation/screens/sofi_products_screen.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  print(1234 ~/ 10);
+  setupLocator();
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: SofiProductsScreen(),
+    );
+  }
 }
